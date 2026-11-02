@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore personagens de Os Simpsons em uma experiência neon.">
+  <title>Springfield // Character Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Springfield Database início">
+      <span class="brand-mark">S</span>
+      <span>SPRINGFIELD<span class="brand-muted">.DB</span></span>
+    </a>
+    <span class="topbar-status"><span class="status-dot"></span> API CONNECTION</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> ARQUIVO DIGITAL DE PERSONAGENS</p>
+        <h1>THE SIMPSONS<span>CHARACTER DATABASE</span></h1>
+        <p class="hero-description">Acesse o universo de Springfield. Explore personagens icônicos em uma interface alimentada por dados de uma API pública.</p>
+        <a class="hero-link" href="#explorer">EXPLORAR PERSONAGENS <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-s">S</div>
+        <span class="art-tag tag-top">SPRINGFIELD / USA</span>
+        <span class="art-tag tag-bottom">EST. 1989 // CLASSIFIED</span>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Informações da base">
+      <div class="stat"><span class="stat-label">BASE DE DADOS</span><strong>PUBLIC API</strong></div>
+      <div class="stat"><span class="stat-label">PERSONAGENS CARREGADOS</span><strong id="total-count">--</strong></div>
+      <div class="stat"><span class="stat-label">STATUS DO SISTEMA</span><strong class="online"><span class="status-dot"></span> ONLINE</strong></div>
+    </section>
+
+    <section class="explorer" id="explorer">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / EXPLORER</p>
+          <h2>Personagens <span>em destaque</span></h2>
+        </div>
+        <p class="section-note">DADOS CARREGADOS DINAMICAMENTE</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box" for="search-input">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Buscar personagem..." autocomplete="off">
+        </label>
+        <button id="reload-button" class="reload-button" type="button"><span aria-hidden="true">↻</span> ATUALIZAR DADOS</button>
+      </div>
+
+      <p id="result-message" class="result-message" aria-live="polite">Conectando à API...</p>
+      <div id="character-grid" class="character-grid" aria-live="polite"></div>
+      <div class="load-more-wrap"><button id="load-more" class="load-more" type="button" hidden>CARREGAR MAIS <span>＋</span></button></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>SPRINGFIELD<span class="brand-muted">.DB</span></span></a>
+    <p>PROJETO ACADÊMICO • HTML / CSS / JAVASCRIPT</p>
+    <p class="footer-small">Dados fornecidos por uma API pública de Os Simpsons.</p>
+  </footer>
+</body>
+</html>
